@@ -1,2 +1,2 @@
-# C++
-Repository reserved for Algorithm and C++ studies
+# Leetcode
+Repository reserved for leetcode exercices
