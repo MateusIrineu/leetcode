@@ -3,7 +3,10 @@
 CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) RETURNS TABLE (Salary INT) 
 AS $$
 BEGIN
-    N := N - 1;
+    IF N < 1 THEN
+        RETURN QUERY SELECT NULL::INT AS Salary;
+    ELSE
+        N := N - 1;
   RETURN QUERY (
     SELECT (
     SELECT DISTINCT Employee.salary
@@ -13,5 +16,6 @@ BEGIN
     OFFSET N
     ) AS Salary
   );
+  END IF;
 END;
 $$ LANGUAGE plpgsql;
