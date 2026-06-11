@@ -6,7 +6,7 @@ BEGIN
     N := N - 1;
   RETURN QUERY (
     SELECT (
-    SELECT DISTINCT salary
+    SELECT DISTINCT Employee.salary
     FROM Employee 
     ORDER BY salary DESC 
     LIMIT 1
