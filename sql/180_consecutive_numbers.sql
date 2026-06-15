@@ -1,5 +1,5 @@
 -- LEETCODE: SQL 
--- EXERCISE: 180
+-- EXERCISE: 180    
 SELECT DISTINCT atual AS ConsecutiveNums
 FROM (
 SELECT 
