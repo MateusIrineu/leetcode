@@ -1,0 +1,7 @@
+-- LEETCODE: SQL 
+-- EXERCISE: 183
+SELECT
+Customers.name AS "Customers"
+FROM Customers
+LEFT JOIN Orders ON Customers.id = Orders.customerId
+WHERE customerId IS NULL;
