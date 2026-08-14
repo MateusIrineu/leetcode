@@ -3,5 +3,6 @@ FROM SalesPerson
 WHERE SalesPerson.sales_id NOT IN (
     SELECT Orders.sales_id
     FROM Orders
-    WHERE Orders.com_id = 1
+    LEFT JOIN Company ON Orders.com_id = Company.com_id
+    WHERE Company.name = 'RED'
 );
